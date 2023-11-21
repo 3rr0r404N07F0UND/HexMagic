@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>진수 변환기</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
+    <script src="./src/js/binary.js" type="text/javascript" defer="defer"></script>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./src/img/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./src/img/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./src/img/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./src/img/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./src/img/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./src/img/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./src/img/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./src/img/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/img/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./src/img/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./src/img/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./src/img/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./src/img/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="xi-fingerprint" id="fingerPrint"></div>
+    <img class="clip" src="./src/img/clip.png" alt="클립" /><img
+      class="note"
+      src="./src/img/note.png"
+      alt="노트"
+    /><img class="pen" src="./src/img/pen.png" alt="펜" /><img
+      class="eraser"
+      src="./src/img/eraser.png"
+      alt="지우개"
+    />
+    <main>
+      <div class="radiusBlock">
+        <div class="topTool">
+          <span class="timeTool"></span>
+          <div class="batteryTool xi-battery"></div>
+          <div class="wifiTool xi-rss"></div>
+        </div>
+        <div class="xi-spinner-3 xi-spin loading"></div>
+        <output></output>
+        <div class="containerInput">
+          <div class="boxTopButton">
+            <div class="buttonBox" id="buttonBox">
+              <button class="firstButton" id="jinsu2ButtonFirst">2</button>
+              <button class="firstButton" id="jinsu8ButtonFirst">8</button>
+              <button class="firstButton" id="jinsu10ButtonFirst">10</button>
+              <button class="firstButton" id="jinsu16ButtonFirst">16</button>
+            </div>
+            <input
+              class="inputNumberSection"
+              id="inputNumberSection"
+              type="text"
+              placeholder="진수 선택하고 숫자 입력"
+              disabled="disabled"
+            />
+          </div>
+          <div class="dropdown">출력하기</div>
+          <div class="buttonBox" id="buttonBox2">
+            <button class="outputButton" id="jinsu2ButtonSecond">2</button>
+            <button class="outputButton" id="jinsu8ButtonSecond">8</button>
+            <button class="outputButton" id="jinsu10ButtonSecond">10</button>
+            <button class="outputButton" id="jinsu16ButtonSecond">16</button>
+          </div>
+          <div class="buttonBoxGrid">
+            <button class="phone">
+              <div class="xi-align-justify xi-rotate-90"></div>
+            </button>
+            <button class="phone">
+              <div class="xi-checkbox-blank"></div>
+            </button>
+            <button class="phone">
+              <div class="xi-angle-left"></div>
+            </button>
+          </div>
+        </div>
+        <div class="alert">
+          <i class="xi-close-min"></i>
+          <h1>경고!</h1>
+          <hr />
+          <p>5자리 초과해서 입력 불가</p>
+          <hr />
+          <button class="alertButton">확인</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

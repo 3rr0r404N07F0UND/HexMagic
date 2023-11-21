@@ -1,0 +1,131 @@
+doctype html
+html(lang="ko-KR")
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="../scss/style.css")
+    title 진수 변환기
+    script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js")
+    script(src="../js/binary.js", type="text/javascript", defer="defer")
+    link(
+      rel="stylesheet",
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="57x57",
+      href="../img/apple-icon-57x57.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="60x60",
+      href="../img/apple-icon-60x60.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="72x72",
+      href="../img/apple-icon-72x72.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="76x76",
+      href="../img/apple-icon-76x76.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="114x114",
+      href="../img/apple-icon-114x114.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="120x120",
+      href="../img/apple-icon-120x120.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="144x144",
+      href="../img/apple-icon-144x144.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="152x152",
+      href="../img/apple-icon-152x152.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="180x180",
+      href="../img/apple-icon-180x180.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="192x192",
+      href="../img/android-icon-192x192.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="32x32",
+      href="../img/favicon-32x32.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="96x96",
+      href="../img/favicon-96x96.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="16x16",
+      href="../img/favicon-16x16.png"
+    )
+    link(rel="manifest", href="../img/manifest.json")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="msapplication-TileImage", content="../img/ms-icon-144x144.png")
+    meta(name="theme-color", content="#ffffff")
+  body
+    #fingerPrint.xi-fingerprint
+    img.clip(src="../img/clip.png", alt="클립")
+    img.note(src="../img/note.png", alt="노트")
+    img.pen(src="../img/pen.png", alt="펜")
+    img.eraser(src="../img/eraser.png", alt="지우개")
+    main
+      .radiusBlock
+        .topTool
+          span.timeTool
+          .batteryTool.xi-battery
+          .wifiTool.xi-rss
+        .xi-spinner-3.xi-spin.loading
+        output
+        .containerInput
+          .boxTopButton
+            #buttonBox.buttonBox
+              button#jinsu2ButtonFirst.firstButton 2
+              button#jinsu8ButtonFirst.firstButton 8
+              button#jinsu10ButtonFirst.firstButton 10
+              button#jinsu16ButtonFirst.firstButton 16
+            input#inputNumberSection.inputNumberSection(
+              type="text",
+              placeholder="진수 선택하고 숫자 입력",
+              disabled="disabled"
+            )
+          .dropdown 출력하기
+          #buttonBox2.buttonBox
+            button#jinsu2ButtonSecond.outputButton 2
+            button#jinsu8ButtonSecond.outputButton 8
+            button#jinsu10ButtonSecond.outputButton 10
+            button#jinsu16ButtonSecond.outputButton 16
+          .buttonBoxGrid
+            button.phone
+              .xi-align-justify.xi-rotate-90
+            button.phone
+              .xi-checkbox-blank
+            button.phone
+              .xi-angle-left
+        .alert
+          i.xi-close-min
+          h1 경고!
+          hr
+          p 5자리 초과해서 입력 불가
+          hr
+          button.alertButton 확인

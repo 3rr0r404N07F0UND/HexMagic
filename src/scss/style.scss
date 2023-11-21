@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "JetBrains Mono", "Noto Sans KR", monospace !important;
+  color: #333;
+  word-spacing: -8/1920 * 100vw;
+  transition: opacity 1s;
+}
+hr {
+  background-color: #333;
+  height: 1px;
+  border: 0;
+  margin: 20/1920 * 100vw !important;
+}
+html {
+  background-color: #cc8800;
+  background-image: url(../img/wood-pattern.png);
+  width: 100%;
+  height: 100%;
+  //background-color: #eee;
+  //background-image: linear-gradient(
+  //  0deg,
+  //  #80ffdb,
+  //  #64dfdf,
+  //  #48bfe3,
+  //  #5390d9,
+  //  #5e60ce
+  //);
+  #fingerPrint {
+    font-size: 100 /1920 * 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    z-index: 100;
+    transition: color 2s, text-shadow 2s;
+    text-shadow: 0 0 20px #51ff0d;
+    //text-shadow: 0 0 10px white;
+    &:hover {
+      cursor: pointer;
+      //color: blue;
+    }
+  }
+  .clip {
+    position: absolute;
+    background-color: transparent;
+    top: 70%;
+    left: 30%;
+    width: 5%;
+  }
+  .note {
+    position: absolute;
+    background-color: transparent;
+    top: 20%;
+    left: 70%;
+    width: 20%;
+  }
+  .pen {
+    position: absolute;
+    background-color: transparent;
+    width: 13%;
+    left: 23%;
+    top: 55%;
+  }
+  .eraser {
+    position: absolute;
+    background-color: transparent;
+    width: 10%;
+    left: 20%;
+    top: 50%;
+  }
+  main {
+    .radiusBlock {
+      border-radius: 10/1920 * 100vw;
+      background-image: linear-gradient(
+        to left,
+        #555 0%,
+        #000 5%,
+        #000 95%,
+        #555 100%
+      );
+      visibility: visible;
+      opacity: 1;
+      overflow: hidden;
+    }
+    //min-width: 400/1920 * 100vw;
+    min-height: 650/1920 * 100vw;
+    width: 400/1920 * 100vw;
+    //height: 650/1920 * 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    //margin-left: -200/1920 * 100vw;
+    //margin-top: -325/1920 * 100vw;
+    border-radius: 10/1920 * 100vw;
+    background-color: silver;
+    box-shadow: 0 0 10px 1px white;
+    text-align: center;
+    //padding: 30/1920 * 100vw 50/1920 * 100vw;
+    transition: transform 5s, min-width 1s;
+    //overflow: hidden;
+    //transform-origin: left;
+    //transform: perspective(5000rem) rotateY(90deg) /*translate(-50%, -50%)*/;
+    transform: translate(-50%, -50%);
+    border-width: 10/1920 * 100vw 5 / 1920 * 100vw;
+    border-style: solid;
+    border-color: silver;
+    box-sizing: border-box;
+    .topTool {
+      //height: 20/1920 * 100vw;
+      * {
+        font-size: 15/1920 * 100vw;
+        margin: 5 / 1920 * 100vw;
+      }
+      .wifiTool {
+        float: right;
+        color: white;
+      }
+      .batteryTool {
+        float: right;
+        color: white;
+        margin-right: 5/1920 * 100vw;
+      }
+      .timeTool {
+        line-height: 20/1920 * 100vw;
+        float: left;
+        color: white;
+        line-height: 15/1920 * 100vw;
+      }
+    }
+    * {
+      visibility: hidden;
+      opacity: 0;
+    }
+    .alert {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      border-radius: 10/1920 * 100vw;
+      padding: 15/1920 * 100vw 10/1920 * 100vw 2/1920 * 100vw 10/1920 * 100vw;
+      background-color: #eee;
+      min-width: 85%;
+      box-shadow: 0 0 5px 1px powderblue;
+      button {
+        float: right;
+        border: 0;
+        background-color: #007bff;
+        color: white;
+        padding: 2/1920 * 100vw 5/1920 * 100vw;
+        border-radius: 10/1920 * 100vw;
+        margin-bottom: 15/1920 * 100vw;
+        font-size: 20/1920 * 100vw;
+        line-height: 45/1920 * 100vw;
+        height: 48/1920 * 100vw;
+        width: 64/1920 * 100vw;
+        &:hover {
+          background-color: #0069d9;
+        }
+        &:active {
+          background-color: #0062cc;
+        }
+      }
+      > i {
+        font-size: 20/1920 * 100vw;
+        float: right;
+        position: relative;
+        top: -5/1920 * 100vw;
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover {
+          transition: color 0.2s;
+          color: blue;
+        }
+        &:active {
+          transition: color 0.2s;
+          color: rebeccapurple;
+        }
+      }
+      h1 {
+        //position: absolute;
+        //left: 50%;
+        //top: 5%;
+        //transform: translateX(-50%);
+        font-weight: bold;
+        font-size: 24/1920 * 100vw;
+        text-align: left;
+        color: #cb4e44;
+      }
+      p {
+        display: inline-block;
+        //word-spacing: normal;
+        word-break: keep-all;
+        font-size: 20/1920 * 100vw;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+    }
+    .loading {
+      font-size: 50/1920 * 100vw;
+      opacity: 0;
+      transition: opacity 0.2s;
+      color: white;
+      position: absolute;
+      left: 44%;
+      top: 25%;
+      //transform: translate(-50%, -50%);
+      //margin-left: -25/1920 * 100vw;
+      //margin-top: 150/1920 * 100vw;
+    }
+    output {
+      position: relative;
+      height: 390/1920 * 100vw;
+      line-height: 390/1920 * 100vw;
+      width: 100%;
+      display: block;
+      font-size: 30/1920 * 100vw;
+      opacity: 0;
+      transition: opacity 1s;
+      text-align: center;
+      //padding-top: 145/1920 * 100vw;
+      //line-height: 490/1920 * 100vw;
+      margin-bottom: 10/1920 * 100vw;
+      color: white;
+      overflow-wrap: break-word;
+      white-space: normal;
+      margin-right: 0;
+      //margin-top: 10/1920 * 100vw;
+    }
+    //li {
+    //  a {
+    //    font-size: 16/ 1920 * 100vw;
+    //  }
+    //}
+    .buttonBoxGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0px;
+      .phone {
+        height: 50/1920 * 100vw;
+        border-radius: 0;
+        width: auto;
+        border: none;
+        background-color: transparent;
+        cursor: default;
+        > div {
+          font-size: 28 /1920 * 100vw;
+          color: white;
+        }
+      }
+    }
+    .buttonBox {
+      display: flex;
+      max-width: 300/1920 * 100vw;
+      margin: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10/1920 * 100vw;
+      &:last-child {
+        margin-bottom: 30/1920 * 100vw;
+      }
+      button {
+        width: 50/1920 * 100vw;
+        height: 50/1920 * 100vw;
+        border-radius: 50%;
+        background-color: white;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 5px rgba(#000, 0.5),
+          inset 0 0 0 rgba($color: #000, $alpha: 0);
+        transition: box-shadow 0.1s;
+        font-size: 20/1920 * 100vw;
+        &:disabled {
+          background-color: #eee;
+          &:active {
+            box-shadow: 0 0 5px rgba(#000, 0.5),
+              inset 0 0 0 rgba($color: #000, $alpha: 0);
+          }
+        }
+        &:active {
+          box-shadow: 0 0 0 rgba($color: #000, $alpha: 0),
+            inset 0 0 5px rgba($color: #000, $alpha: 0.5);
+        }
+      }
+    }
+    .calculating {
+      width: 250/1920 * 100vw !important;
+      height: 40/1920 * 100vw !important;
+      font-size: 16/1920 * 100vw !important;
+      margin-bottom: 40/1920 * 100vw;
+    }
+    .inputNumberSection {
+      width: 300/1920 * 100vw;
+      height: 50/1920 * 100vw;
+      border-radius: 10/1920 * 100vw;
+      padding: 10/1920 * 100vw;
+      border: 0;
+      outline: 0;
+      box-shadow: 0 0 5px rgba(#000, 0.25),
+        inset 0 0 0px rgba($color: #000, $alpha: 0);
+      text-align: right;
+      //margin-bottom: 10/1920 * 100vw;
+      line-height: 50/1920 * 100vw;
+      font-size: 26/1920 * 100vw;
+      transition: box-shadow 0.3s;
+      &::placeholder {
+        color: rgba($color: #333, $alpha: 0.3);
+      }
+      &:focus {
+        box-shadow: 0 0 0px rgba(#000, 0),
+          inset 0 0 5px rgba($color: #000, $alpha: 0.25);
+      }
+      &:disabled {
+        background-color: whitesmoke;
+      }
+    }
+  }
+}
+.boxTopButton {
+  margin: auto;
+  padding: 10/1920 * 100vw !important;
+  width: 350/1920 * 100vw;
+  border: 3px solid white;
+  border-radius: 15/1920 * 100vw;
+  background-color: rgb(99, 67, 240);
+}
+.dropdown {
+  height: 60/1920 * 100vw;
+  font-size: 26/1920 * 100vw;
+  line-height: 60/1920 * 100vw;
+  color: white;
+}
